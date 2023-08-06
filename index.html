@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h4>if your city weather will not be shown then please enter state name also seperated by space(" ")</h4>
+    <div class="container size">
+        
+        <div id="sidebar">
+            <form class="searchForm"> 
+                <input class="searchBox" type="search" placeholder="Search City">
+                <button class="submit" type="submit"><img src="./search-icon.svg"></button>
+            </form>
+            <div class="icon-box hide">
+                <img src="./glassy-icons/thunder_rain.svg" id="mainWeatherIcon" alt="">
+            </div>
+            
+            <div class="location">
+                <div class="img-box hide" ><img src="./location-icon.svg"></div>
+                <p class="hide">New Delhi, India</p>
+            </div>
+            <h1 class="temp hide">0°C</h1>
+            <div class="datetime hide">
+                <p class="dateDayTime">28-06-2023 Friday, 11:50pm</p>
+            </div>
+            <div class="maxmin hide">
+                <h3>Maximum Temperature: <span class="maxT">Value</span></h3>
+                <h3>Minimum Temperature: <span class="minT">Value</span></h3>
+                <h3>Overall Weather: </h3>
+                <p>description</p>
+            </div>
+        </div>
+        <div id="main" class="hide">
+            <h1>Heavy Rain</h1>
+            <div class="cards" id="hourCardContainer">
+                <div class="card" >
+                    <p class="time">09:00</p>
+                    <div class="img-box"><img src="./glassy-icons/cloudy_day.svg" alt=""></div>
+                    <p class="temp">22°C</p>
+                </div>
+            </div>
+            <div id="details">
+                <h1>Today's Highlights</h1>
+                <div class="dtlCards">
+                    <div class="dtlCard">
+                        <h3>Wind Speed</h3>
+                        <h2 id="windSpeed">value</h2>
+                        <p>km/h. <br> Wind speed is typically measured 10m above ground in a location with no nearby obstructions.
+
+                        </p>
+                    </div>
+                    <div class="dtlCard">
+                        <h3>Wind Direction</h3>
+                        <h2 id="windDirection">value</h2>
+                        <p id="dirDesc">descript</p>
+                    </div>
+                    <div class="dtlCard">
+                        <h3>Humidity</h3>
+                        <h2 id="humidity">value</h2>
+                        <p>%</p>
+                    </div>
+                    <div class="dtlCard">
+                        <h3>Sunrise</h3>
+                        <h2 id="sunRise">value</h2>
+                        <p>Morning</p>
+                    </div>
+                    <div class="dtlCard">
+                        <h3>Sunset</h3>
+                        <h2 id="sunSet">value</h2>
+                        <p>Evening</p>
+                    </div>
+                    <div class="dtlCard">
+                        <h3>Visibility</h3>
+                        <h2 id="visibility">value</h2>
+                        <p id="visDesc">descript</p>
+                    </div>
+                    <div class="dtlCard">
+                        <h3>UV Index</h3>
+                        <h2 id="uvIndex">value</h2>
+                        <p id="uvDesc">descript</p>
+                    </div>
+                    <div class="dtlCard">
+                        <h3>Moonphase</h3>
+                        <h2 id="moonphase">value</h2>
+                        <p id="moonDesc">descript</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

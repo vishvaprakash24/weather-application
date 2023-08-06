@@ -1,0 +1,432 @@
+/* *::-webkit-scrollbar,
+*::-webkit-scrollbar-thumb {
+  width: 25px;
+  border-radius: 10px;
+  background-clip: padding-box;
+  border: 10px solid transparent;
+}
+
+*::-webkit-scrollbar-thumb {        
+  box-shadow: inset 0 0 0 10px;
+} */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+:root{
+    --hover-color:#12f7ff;
+    --secon-bg-color:#292e33;
+}
+*::-webkit-scrollbar{
+    height: 0;
+    width: 0.3rem;
+}
+*::-webkit-scrollbar-track{
+    background:var(--secon-bg-color);
+}
+
+*::-webkit-scrollbar-thumb{
+    background:var(--hover-color);
+    border-radius:5rem;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+h4{
+    color: rgb(255, 76, 6);
+    font-size: 1.4vw;
+    font-weight: 300;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    flex-direction: column;
+    gap: 5px;
+    height: 100vh;
+    color: white;
+    background: linear-gradient(45deg, #db5454,#3C5A5A, rgb(151, 46, 172));
+}
+.hide{
+    display: none;
+}
+
+.container{
+    max-width: 73vw;
+    max-height: 92vh;
+    border: 5px solid #77B0AE;
+    display: flex;
+    padding: 2vw;
+    gap: 1vw;
+    border-radius: 10px;
+    background: url("./bg-4.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+}
+.size{
+    height: fit-content;
+    width: fit-content;
+}
+.container #sidebar{
+    border-radius: 10px;
+    padding: 1.5vw;
+    background-color: rgba(44, 85, 85, 0.4);
+    border: 1px solid #a1f3d8;
+    box-shadow: 0 0 10px #ccc;
+    flex-basis: auto;
+    display: flex;
+    /* overflow: auto; */
+    flex-direction: column;
+}
+.container #sidebar .searchForm{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* margin: 0 auto;     */
+    border: 1px solid #a1f3d8;
+    border-radius: 10px;
+    padding: 5px;
+}
+.container #sidebar .searchForm .searchBox{
+    flex-basis: 100%;
+    order: 2;
+    outline: none;
+    padding: 5px;
+    background: transparent;
+    border: none;
+    color: #f8f8f8;
+    font-size: 1.5vw;
+    font-weight: 300;
+}
+.container #sidebar .searchForm .searchBox::placeholder{
+    color: #f8f8f8;
+    font-size: 1.5vw;
+    font-weight: 300;
+}
+.container #sidebar .searchForm button{
+    order: -1;
+    background-color: transparent;
+    border: none;
+    padding: 0 5px;
+    cursor: pointer;    
+}
+.container #sidebar .searchForm button img{
+    height: 2.2vw;
+    width: 2.2vw;
+}
+.container #sidebar .icon-box{
+    width: fit-content;
+    height: fit-content;
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+}
+.container #sidebar .icon-box img{
+    width: inherit;
+    height: inherit;
+    filter: drop-shadow(100px 200px 300px #000000) drop-shadow(-10px -10px 50px #000000);
+}
+.container #sidebar .location{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.container #sidebar .location .img-box img{
+    width: 2vw;
+    height: 2vw;
+}
+.container #sidebar .location p{
+    font-size: 1.5vw;
+}
+.container #sidebar .temp{
+    font-size: 2vw;
+    margin: 5px 0px;
+}
+.container #sidebar .datetime p{
+    font-size: 1.5vw;
+    padding: 5px 0;
+    border-bottom: 2px solid #5f9e89;
+}
+.container #sidebar .maxmin h3{
+    padding: 3px 0;
+    font-weight: 300;
+    font-size: 1.2vw;
+}
+.container #sidebar .maxmin p{
+    font-size: 1.1vw;
+    font-weight: 300;
+    font-style: italic;
+}
+.container #main{
+    padding: 0 1vw;
+    flex-basis: 70%;
+    overflow: auto;
+}
+.container #main h1{
+    font-size: 2.5vw;
+    font-weight: 500;
+    margin: 5px 0;
+}
+.container #main .cards{
+    display: flex;
+    gap: 10px;
+    padding: 5px;
+    overflow: auto;
+}
+
+.container #main .cards .card{
+    background: rgb(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    display: flex;
+    gap: 2px;
+    padding: 2px 7px;
+    border-radius: 7px;
+    align-items: center;
+    flex-direction: column;
+}
+.container #main .cards .card .time, .temp{
+    font-size: 1vw;
+}
+.container #main .cards .card .img-box{
+    background-color: #3c5a5a73;
+    border-radius: 10px;
+    width: 32px;
+    height: 32px;
+}
+.container #main .cards .card .img-box img{
+    width: inherit;
+    height: inherit;
+}
+
+
+.container #main #details h1{
+    font-size: 2.2vw;
+    margin-top: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 0.6rem;
+}
+.container #main #details .dtlCards{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1vw;
+}
+.container #main #details .dtlCards .dtlCard{
+    background: rgb(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    display: flex;
+    gap: 5px;
+    padding: 5px 10px;
+    justify-content: space-between;
+    border-radius: 10px;
+    flex-direction: column;
+    align-items: center;
+}
+.container #main #details .dtlCards .dtlCard #sunRise{
+    font-size: 1.3vw;
+}
+.container #main #details .dtlCards .dtlCard #sunSet{
+    font-size: 1.3vw;
+}
+.container #main #details .dtlCards .dtlCard h2{
+    font-size: 1.3vw;
+    font-weight: 500;
+}
+.container #main #details .dtlCards .dtlCard p{
+    font-size: 1vw;
+    text-align: center;
+
+}
+.container #main #details .dtlCards .dtlCard h3{
+    font-size: 1.2vw;
+    border-bottom: 1px solid #84b9b9;
+}
+
+@media screen and (max-width: 767px) {
+
+    h4{
+        font-size: 2.5vw;
+        margin: 5px auto;
+        text-align: center;
+    }
+    body{
+        justify-content: flex-start;
+    }
+    .hide{
+        display: none;
+    }
+    .size{
+        height: fit-content;
+        width: fit-content;
+        max-width: 85vw;
+        max-height: 94vh;
+    }
+    .container{
+        max-width: 85vw;
+        max-height: 94vh;
+        border: 5px solid #77B0AE;
+        display: flex;
+        flex-direction: column;
+        padding: 2vw;
+        gap: 1vw;
+        border-radius: 10px;
+        background: url("./bg-4.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .container #sidebar{
+        border-radius: 10px;
+        padding: 3vw;
+        background-color: rgba(44, 85, 85, 0.4);
+        border: 1px solid #a1f3d8;
+        box-shadow: 0 0 10px #ccc;
+        flex-basis: auto;
+        display: flex;
+        /* overflow: auto; */
+        flex-direction: column;
+    }
+    .container #sidebar .searchForm{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        /* margin: 0 auto;     */
+        border: 1px solid #a1f3d8;
+        border-radius: 10px;
+        padding: 5px;
+    }
+    .container #sidebar .searchForm .searchBox{
+        flex-basis: 100%;
+        order: 2;
+        outline: none;
+        padding: 5px;
+        background: transparent;
+        border: none;
+        color: #f8f8f8;
+        font-size: 2.5vw;
+        font-weight: 300;
+    }
+    .container #sidebar .searchForm .searchBox::placeholder{
+        color: #f8f8f8;
+        font-size: 2.5vw;
+        font-weight: 300;
+    }
+    .container #sidebar .searchForm button{
+        order: 3;
+        background-color: transparent;
+        border: none;
+        padding: 0 5px;
+        cursor: pointer;    
+    }
+    
+    .container #sidebar .searchForm button img{
+        height: 3vw;
+        width: 3vw;
+    }
+    .container #sidebar .icon-box{
+        margin: 0;
+        width: 200px;
+        height: 200px;
+    }
+    .container #sidebar .icon-box img{
+        height: inherit;
+        width: inherit;
+        filter: drop-shadow(100px 200px 300px #000000) drop-shadow(-10px -10px 50px #000000);
+    }
+    .container #sidebar .location{
+        display: flex;
+        gap: 1vw;
+        align-items: center;
+    }
+    .container #sidebar .location .img-box img{
+        width: 5vw;
+        height: 5vw;
+    }
+    .container #sidebar .location p{
+        font-size: 2.5vw;
+    }
+    .container #sidebar .temp{
+        font-size: 4.5vw;
+        margin: 0.3vw 0.3vw;
+    }
+    
+    .container #sidebar .datetime p{
+        font-size: 2.5vw;
+        padding: 0.5vw 0;
+        border-bottom: 1px solid #5f9e89;
+    }
+    .container #sidebar .maxmin h3{
+        padding: 2px 0;
+        font-size: 2.3vw;
+    }
+    .container #sidebar .maxmin p{
+        font-size: 2.1vw;
+    }
+    .container #main{
+        padding: 0 1vw;
+        flex-basis: 70%;
+        overflow: auto;
+    }
+    .container #main h1{
+        font-size: 3.2vw;
+    }
+    .container #main .cards .card{
+        background: rgb(0, 0, 0, 0.4);
+        backdrop-filter: blur(5px);
+        display: flex;
+        gap: 2px;
+        padding: 2px 7px;
+        border-radius: 7px;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .container #main .cards{
+        gap: 1vw;
+        padding: 5px;
+    }
+    .container #main .cards .card .time, .temp{
+        font-size: 2.4vw;
+    }
+    .container #main .cards .card .img-box{
+        background-color: #729c9c73;
+        border-radius: 7px;
+    }
+    .container #main .cards .card .img-box img{
+        width: inherit;
+        height: inherit;
+    }
+    .container #main #details h1{
+        font-size: 3.2vw;
+        margin-bottom: 0.6rem;
+    }
+    .container #main #details .dtlCards{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2vw;
+    }
+    .container #main #details .dtlCards .dtlCard{
+        gap: 3px;
+        padding: 5px;
+    }
+    .container #main #details .dtlCards .dtlCard #sunRise{
+        font-size: 2.3vw;
+    }
+    .container #main #details .dtlCards .dtlCard #sunSet{
+        font-size: 2.3vw;
+    }
+    .container #main #details .dtlCards .dtlCard h2{
+        font-size: 2.3vw;
+        font-weight: 500;
+    }
+    .container #main #details .dtlCards .dtlCard p{
+        font-size: 2vw;
+        text-align: justify;
+        font-weight: 300;
+    }
+    .container #main #details .dtlCards .dtlCard h3{
+        font-size: 2.3vw;
+        border-bottom: 2px solid #84b9b9;
+    }
+  }
