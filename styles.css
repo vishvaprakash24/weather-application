@@ -61,7 +61,7 @@ body{
     padding: 2vw;
     gap: 1vw;
     border-radius: 10px;
-    background: url("./bg-4.jpg");
+    background: url("./bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: right;
@@ -272,7 +272,7 @@ body{
         padding: 2vw;
         gap: 1vw;
         border-radius: 10px;
-        background: url("./bg-4.jpg");
+        background: url("./bg.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
